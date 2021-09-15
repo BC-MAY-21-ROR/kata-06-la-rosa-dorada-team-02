@@ -109,6 +109,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   rake
@@ -119,4 +120,4 @@ DEPENDENCIES
   sandi_meter (~> 1.2)
 
 BUNDLED WITH
-   1.17.2
+   2.2.27

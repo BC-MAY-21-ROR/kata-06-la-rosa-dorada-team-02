@@ -47,7 +47,7 @@
     <div class="file-time">
       <span class="committed-at">
         
-          Updated <time class='js-timeago' datetime='2021-09-14 18:29:39 -0500'>2021-09-14 18:29:39 -0500</time>
+          Never committed
         
       </span>
     </div>
@@ -68,7 +68,7 @@
           </div>
           <div class="code-statistics col-md-11">
             <div class="col-md-3">
-              <div><span class="metric">34</span><small> lines of codes</small></div>
+              <div><span class="metric">31</span><small> lines of codes</small></div>
               <div><span class="metric">0</span><small> methods</small></div>
             </div>
             <div class="col-md-3">
@@ -101,35 +101,32 @@
 
 require File.join(File.dirname(__FILE__), &#39;gilded_rose&#39;)
 require File.join(File.dirname(__FILE__), &#39;item&#39;)
-puts &quot;OMGHAI!&quot;
+puts &#39;OMGHAI!&#39;
 items = [
-  Item.new(name=&quot;+5 Dexterity Vest&quot;, sell_in=10, quality=20),
-  Item.new(name=&quot;Aged Brie&quot;, sell_in=2, quality=0),
-  Item.new(name=&quot;Elixir of the Mongoose&quot;, sell_in=5, quality=7),
-  Item.new(name=&quot;Sulfuras, Hand of Ragnaros&quot;, sell_in=0, quality=80),
-  Item.new(name=&quot;Sulfuras, Hand of Ragnaros&quot;, sell_in=-1, quality=80),
-  Item.new(name=&quot;Backstage passes to a TAFKAL80ETC concert&quot;, sell_in=15, quality=20),
-  Item.new(name=&quot;Backstage passes to a TAFKAL80ETC concert&quot;, sell_in=10, quality=49),
-  Item.new(name=&quot;Backstage passes to a TAFKAL80ETC concert&quot;, sell_in=5, quality=49),
+  Item.new(name = &#39;+5 Dexterity Vest&#39;, sell_in = 10, quality = 20),
+  Item.new(name = &#39;Aged Brie&#39;, sell_in = 2, quality = 0),
+  Item.new(name = &#39;Elixir of the Mongoose&#39;, sell_in = 5, quality = 7),
+  Item.new(name = &#39;Sulfuras, Hand of Ragnaros&#39;, sell_in = 0, quality = 80),
+  Item.new(name = &#39;Sulfuras, Hand of Ragnaros&#39;, sell_in = -1, quality = 80),
+  Item.new(name = &#39;Backstage passes to a TAFKAL80ETC concert&#39;, sell_in = 15, quality = 20),
+  Item.new(name = &#39;Backstage passes to a TAFKAL80ETC concert&#39;, sell_in = 10, quality = 49),
+  Item.new(name = &#39;Backstage passes to a TAFKAL80ETC concert&#39;, sell_in = 5, quality = 49),
   # This Conjured item does not work properly yet
-  Item.new(name=&quot;Conjured Mana Cake&quot;, sell_in=3, quality=6), # &lt;-- :O
+  Item.new(name = &#39;Conjured Mana Cake&#39;, sell_in = 3, quality = 6) # &lt;-- :O
 ]
 
 days = 5
-if ARGV.size &gt; 0
-  days = ARGV[0].to_i + 1
-end
+days = ARGV[0].to_i + 1 if ARGV.size &gt; 0
 
 gilded_rose = GildedRose.new items
 1.upto(5) do |day|
   gilded_rose.update_quality
   puts &quot;-------- day #{day} ---------------------&quot;
-  puts &quot;&quot;
+  puts &#39;&#39;
   items.each do |item|
     puts &quot;Name: #{item.name} |  sellIn: #{item.sell_in} | quality: #{item.quality}&quot;
   end
-  puts &quot;&quot;
-  
+  puts &#39;&#39;
 end
 </code>
   </div>

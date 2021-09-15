@@ -22,7 +22,7 @@ if ARGV.size > 0
 end
 
 gilded_rose = GildedRose.new items
-1.upto(5) do |day|
+1.upto(2) do |day|
   gilded_rose.update_quality
   puts "-------- day #{day} ---------------------"
   puts ""
