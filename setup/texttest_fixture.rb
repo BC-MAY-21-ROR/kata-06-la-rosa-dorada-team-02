@@ -21,11 +21,12 @@ days = ARGV[0].to_i + 1 if ARGV.size > 0
 
 gilded_rose = GildedRose.new items
 1.upto(5) do |day|
-  gilded_rose.update_quality
+  
   puts "-------- day #{day} ---------------------"
   puts ''
   items.each do |item|
     puts "Name: #{item.name} |  sellIn: #{item.sell_in} | quality: #{item.quality}"
   end
   puts ''
+  gilded_rose.update_quality
 end
